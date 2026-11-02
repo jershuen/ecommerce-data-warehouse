@@ -5,6 +5,7 @@ DDL Script: Create Bronze Tables
 Script Purpose: 
   This script creates 9 tables for each of the 9 csv files in the Bronze schema. 
   If the table already exists, then it will be dropped first to avoid duplication. 
+===========================================================================================
 */
 
 -- Create 5 tables from E-commerce Marketplace Platform
