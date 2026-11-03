@@ -164,6 +164,7 @@ BEGIN
 			FIELDTERMINATOR = ',',
 			ROWTERMINATOR = '0x0A',
 			TABLOCK,
+			CODEPAGE = '65001',
 			FORMAT = 'CSV'
 		);
 		SET @end_time = GETDATE();
