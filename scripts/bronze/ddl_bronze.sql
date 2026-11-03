@@ -50,7 +50,7 @@ review_score INT,
 review_comment_title NVARCHAR(50),
 review_comment_message NVARCHAR(500),
 review_creation_date DATE,
-review_answer_timestamp DATETIME
+review_answer_timestamp DATETIME2
 );
 
 IF OBJECT_ID('bronze.ecom_orders', 'U') IS NOT NULL
@@ -59,10 +59,10 @@ CREATE TABLE bronze.ecom_orders(
 order_id NVARCHAR(50),
 customer_id NVARCHAR(50),
 order_status NVARCHAR(50),
-order_purchase_timestamp DATETIME,
-order_approved_at DATETIME,
-order_delivered_carrier_date DATETIME,
-order_delivered_customer_date DATETIME,
+order_purchase_timestamp DATETIME2,
+order_approved_at DATETIME2,
+order_delivered_carrier_date DATETIME2,
+order_delivered_customer_date DATETIME2,
 order_estimated_delivery_date DATE
 );
 
