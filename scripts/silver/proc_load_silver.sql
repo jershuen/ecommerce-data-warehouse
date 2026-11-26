@@ -15,10 +15,10 @@ Paratmeters:
 Usage Example:
   EXEC silver.load_silver
 
- NOTE TAGS USED IN COMMENTS
+Note tags used in comments:
    [i]  INFO               - rationale or context worth remembering
 
- DATA-QUALITY ASPECT TAGS (tags are abbreviated in the checking file)
+Data quality aspect tags ((tags are abbreviated in the checking file)
    1. [NULL handling]              - genuinely missing vs. not applicable
    2. [Duplicate handling]         - exact / business-key duplicates
    3. [Erroneous data]             - impossible / inconsistent / suspicious
@@ -29,13 +29,13 @@ Usage Example:
    8. [Standardisation]            - TRIM, labels, units, representations
    9. [Integration & enrichment]   - combining sources, derived columns
 
- TABLE PREFIXES (groups tables by domain)
+Table Prefixes (groups tables by domain)
    slm_  : geolocation, sellers
    ecom_ : customers, orders, order_items, order_payments, order_reviews
    pim_  : products, product_category_name_translation
    c_    : columns that are CALCULATED in silver (flags, not source data)
 
- LOAD ORDER (must be kept - later steps read earlier SILVER tables)
+Load Order (must be kept - later steps read earlier SILVER tables)
    1. slm_geolocation   <- bronze geolocation + zips seen only in customers/sellers
    2. ecom_customers    <- needs silver.slm_geolocation
    3. slm_sellers       <- needs silver.slm_geolocation
